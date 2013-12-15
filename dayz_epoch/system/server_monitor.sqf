@@ -361,3 +361,17 @@ if (isServer and isNil "sm_done") then {
 	publicVariable "sm_done";
 };
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\helievac\init.sqf";
+nul =    [
+                6,        //IGNORE THIS
+                3,        //IGNORE THIS
+                (3*60),    //Fixed-Time (in seconds) between each start of a new Car drop flyover
+                (0*60),      //Random time between each flyover
+                0.99,        //Spawnchance of the car drop (1 will spawn all possible, 0.5 only 50% of them)
+                'center', //IGNORE THIS
+                8000,    // IGNORE THIS
+                true,    //IGNORE THIS
+                false,    //IGNORE THIS
+                0,    //RANDOM WP (the amount of random waypoints this could add to the guarenteed waypoints)
+                15,        //GUARANTEED WP (the amount of car drops that will actually happen
+                1        //Amount of Damage the Heli has to get while in-air to explode before the POC. (0.0001 = Insta-Explode when any damage//bullethit, 1 = Only Explode when completly damaged)
+            ] spawn server_carAN2;
