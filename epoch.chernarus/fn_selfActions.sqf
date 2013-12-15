@@ -23,7 +23,12 @@ if (!isNull _nearLight) then {
 	};
 };
 
-// Krixes Self Bloodbag
+//---------------------------------------Self Bloodbag------------------------------------
+    //Krixes Self Bloodbag
+_mags = magazines player;
+
+
+    // Krixes Self Bloodbag
     if ("ItemBloodbag" in _mags) then {
         hasBagItem = true;
     } else { hasBagItem = false;};
