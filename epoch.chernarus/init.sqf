@@ -102,4 +102,8 @@ call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
 
 [] execVM "addons\SARGE\SAR_AI_init.sqf";
 
+    // Mission System Markers
+    [] execVM "debug\addmarkers.sqf";
+    [] execVM "debug\addmarkers75.sqf";
+
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
