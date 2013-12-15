@@ -30,7 +30,7 @@ dayz_maxLocalZombies = 30; // Default = 30
 
 dayz_paraSpawn = false;
 
-dayz_minpos = -1; 
+dayz_minpos = 0; 
 dayz_maxpos = 16000;
 
 dayz_sellDistance_vehicle = 10;
@@ -52,7 +52,8 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";	
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
+//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
+call compile preprocessFileLineNumbers "compiles.sqf";    //Compile Custom Functions 
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
 progressLoadingScreen 1.0;
@@ -74,24 +75,44 @@ if (!isDedicated) then {
 	waitUntil {!isNil "dayz_loadScreenMsg"};
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
-	[] execVM "admintools\Activate.sqf";
-	
+	_nil = [] execVM "helievac\functions.sqf";
+	execVM "service_point\service_point.sqf";
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	
-	//anti Hack
-	[] execVM "\z\addons\dayz_code\system\antihack.sqf";
-
-	//Lights
-	//[0,0,true,true,true,58,280,600,[0.698, 0.556, 0.419],"Generator_DZ",0.1] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
+	//Anti Hack 
+	if (true) then {
+		[] execVM "\z\addons\dayz_code\system\antihack.sqf";
+	 };
 	
+	//Lights
+	if (true) then {
+		[0,0,true,true,true,58,280,600,[0.698, 0.556, 0.419],"Generator_DZ",0.1] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
+	};
 };
 
-#include "\z\addons\dayz_code\system\REsec.sqf"
+if(true) then {
+	#include "\z\addons\dayz_code\system\REsec.sqf"
+};
 
 //Start Dynamic Weather
-execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
+if(true) then {
+	execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
+};
+[] execVM "admintools\Activate.sqf";
 
+// UPSMON
+call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
+// SHK 
+call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
+// run SAR_AI
+
+[] execVM "addons\SARGE\SAR_AI_init.sqf";
+[] execVM "safezone\safezone.sqf";
+
+// Mission System Markers
+[] execVM "debug\addmarkers.sqf";
+[] execVM "debug\addmarkers75.sqf"; 
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
