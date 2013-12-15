@@ -322,7 +322,8 @@ if (isServer and isNil "sm_done") then {
 	if(OldHeliCrash) then {
 		_nul = [3, 4, (50 * 60), (15 * 60), 0.75, 'center', HeliCrashArea, true, false] spawn server_spawnCrashSite;
 	};
-
+	// [_guaranteedLoot, _randomizedLoot, _frequency, _variance(DONOTUSE), _spawnChance, _spawnMarker, _spawnRadius, _spawnFire, _fadeFire, waypoints, damage]
+	nul = [7, 5, 700, 0, 0.99, 'center', 4000, true, false, false, 5, 1]spawn server_spawnC130CrashSite;
 	if (isDedicated) then {
 		// Epoch Events
 		_id = [] spawn server_spawnEvents;
