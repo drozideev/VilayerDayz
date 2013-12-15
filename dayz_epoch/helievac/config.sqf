@@ -1,4 +1,4 @@
-HELIEVAC_heli = 'UH60M_EP1';
+HELIEVAC_heli = 'UH60M_EP1_DZE';
 HELIEVAC_wait = 60;
 HELIEVAC_spawndist = 6000;
 HELIEVAC_spawnheight = 60;
