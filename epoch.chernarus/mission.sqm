@@ -1172,7 +1172,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=20;
+		items=17;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1295,36 +1295,6 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
-		class Item17
-		{
-			position[]={6325.6772,304.99033,7807.7412};
-			name="Stary Safezone";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorOrange";
-			a=150;
-			b=150;
-		};
-		class Item18
-		{
-			position[]={4063.4226,365.00577,11664.19};
-			name="Bash Safezone";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorOrange";
-			a=150;
-			b=150;
-		};
-		class Item19
-		{
-			position[]={11447.472,317.26886,11364.504};
-			name="Klen Safezone";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorOrange";
-			a=150;
-			b=150;
-		};
 	};
 	class Sensors
 	{
@@ -1332,16 +1302,16 @@ class Mission
 		class Item0
 		{
 			position[]={6325.6772,304.99033,7807.7412};
-			a=150;
-			b=150;
-			activationBy="ANY";
+			a=100;
+			b=100;
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonestary";
-			expCond="(player distance zonestary) < 150;";
-			expActiv="inSafeZone = true; canbuild = false; inTraderCity = ""Stary"";";
-			expDesactiv="inSafeZone = false; canbuild = true; inTraderCity = ""Any"";";
+			expCond="(player distance zonestary) < 100;";
+			expActiv="TitleText[""Now entering trader city Stary"",""PLAIN DOWN""]; canbuild = false; inTraderCity = ""Stary"";";
+			expDesactiv="TitleText[""Now leaving trader city Stary"",""PLAIN DOWN""]; canbuild = true; inTraderCity = ""Any"";";
 			class Effects
 			{
 			};
@@ -1349,16 +1319,16 @@ class Mission
 		class Item1
 		{
 			position[]={4063.4226,365.00577,11664.19};
-			a=150;
-			b=150;
-			activationBy="ANY";
+			a=100;
+			b=100;
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonebash";
-			expCond="(player distance zonebash) < 150;";
-			expActiv="inSafeZone = true; canbuild = false; inTraderCity = ""Bash"";";
-			expDesactiv="inSafeZone = false; canbuild = true; inTraderCity = ""Any"";";
+			expCond="(player distance zonebash) < 100;";
+			expActiv="TitleText[""Now entering trader city Bash"",""PLAIN DOWN""]; canbuild = false; inTraderCity = ""Bash"";";
+			expDesactiv="TitleText[""Now leaving trader city Bash"",""PLAIN DOWN""]; canbuild = true; inTraderCity = ""Any"";";
 			class Effects
 			{
 			};
@@ -1366,16 +1336,16 @@ class Mission
 		class Item2
 		{
 			position[]={11447.472,317.26886,11364.504};
-			a=150;
-			b=150;
-			activationBy="ANY";
+			a=100;
+			b=100;
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zoneklen";
-			expCond="(player distance zoneklen) < 150;";
-			expActiv="inSafeZone = true; canbuild = false; inTraderCity = ""Klen"";";
-			expDesactiv="inSafeZone = false; canbuild = true; inTraderCity = ""Any"";";
+			expCond="(player distance zoneklen) < 100;";
+			expActiv="TitleText[""Now entering trader city Klen"",""PLAIN DOWN""]; canbuild = false; inTraderCity = ""Klen"";";
+			expDesactiv="TitleText[""Now leaving trader city Klen"",""PLAIN DOWN""]; canbuild = true; inTraderCity = ""Any"";";
 			class Effects
 			{
 			};
@@ -1383,14 +1353,14 @@ class Mission
 		class Item3
 		{
 			position[]={1606.6443,289.70795,7803.5156};
-			a=50;
-			b=50;
-			activationBy="ANY";
+			a=100;
+			b=100;
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonebandit";
-			expCond="(player distance zonebandit) < 50;";
+			expCond="(player distance zonebandit) < 100;";
 			expActiv="canbuild = false; inTraderCity = ""Bandit Trader"";";
 			expDesactiv="canbuild = true; inTraderCity = ""Any"";";
 			class Effects
@@ -1400,14 +1370,14 @@ class Mission
 		class Item4
 		{
 			position[]={12944.227,210.19823,12766.889};
-			a=50;
-			b=50;
-			activationBy="ANY";
+			a=100;
+			b=100;
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonehero";
-			expCond="(player distance zonehero) < 50;";
+			expCond="(player distance zonehero) < 100;";
 			expActiv="canbuild = false; inTraderCity = ""Hero Trader"";";
 			expDesactiv="canbuild = true; inTraderCity = ""Any"";";
 			class Effects

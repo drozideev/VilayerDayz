@@ -75,14 +75,13 @@ if (!isDedicated) then {
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
 	[] execVM "admintools\Activate.sqf";
-	[] execVM "safezone\safezone.sqf";
 	
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	
 	//anti Hack
-	//[] execVM "\z\addons\dayz_code\system\antihack.sqf";
+	[] execVM "\z\addons\dayz_code\system\antihack.sqf";
 
 	//Lights
 	//[0,0,true,true,true,58,280,600,[0.698, 0.556, 0.419],"Generator_DZ",0.1] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
@@ -93,14 +92,6 @@ if (!isDedicated) then {
 
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
-
-// UPSMON
-call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
-// SHK 
-call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
-// run SAR_AI
-
-[] execVM "addons\SARGE\SAR_AI_init.sqf";
 
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
