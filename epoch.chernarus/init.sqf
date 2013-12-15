@@ -79,6 +79,7 @@ if (!isDedicated) then {
 	[] execVM "safezone\safezone.sqf";
 	_nil = [] execVM "helievac\functions.sqf";
 	execVM "service_point\service_point.sqf";
+	[] execVM "custom_monitor.sqf";
 	
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
