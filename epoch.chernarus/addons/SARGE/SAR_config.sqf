@@ -181,7 +181,7 @@ SAR_EXTREME_DEBUG = false;
 //
 // SET THIS TO 0 to hide the group markers on the map and see the UPSMON group debug messages
 // Possible values: 1 = enabled, 0 = disabled
-KRON_UPS_Debug = 1;
+KRON_UPS_Debug = 0;
 
 //
 // SET THIS TO 1 to see waypoints and pathfinding information in your rpt
@@ -196,7 +196,7 @@ KRON_UPS_AI_Debug = 0;
 
 
 // Show AI ingame markers to see their xplevel, and logs to the rpt 
-SAR_SHOW_XP_LVL = true;
+SAR_SHOW_XP_LVL = false;
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
