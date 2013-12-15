@@ -42,20 +42,6 @@ _mags = magazines player;
     };
 //---------------------------------------Self Bloodbag End------------------------------------
 
-//---------------------------------------Clothes take off------------------------------------
-	_clothesTaken = cursorTarget getVariable["clothesTaken",false];
- 
-    // Take clothes by Zabn @ BalotaBuddies.net
-    if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
-        if (s_player_clothes < 0) then {
-            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Снять одежду")+("</t>"), "player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
-        };
-    } else {
-        player removeAction s_player_clothes;
-        s_player_clothes = -1;
-        };
-//---------------------------------------Clothes take off end------------------------------------
-
 _itemsPlayer = items player;
 if (isNil "s_player_heliEvacAction") then {
 	s_player_heliEvacAction = -1;
@@ -706,6 +692,18 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		player removeAction s_player_sleep;
 		s_player_sleep = -1;
 	};
+	
+		_clothesTaken = cursorTarget getVariable["clothesTaken",false];
+ 
+    // Take clothes by Zabn @ BalotaBuddies.net
+    if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
+        if (s_player_clothes < 0) then {
+            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Снять одежду")+("</t>"), "player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
+        };
+    } else {
+        player removeAction s_player_clothes;
+        s_player_clothes = -1;
+        };
 	
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != _cursorTarget) and _isVehicle and !_isMan and _hasToolbox and (damage _cursorTarget < 1) and !_isDisallowRepair) then {
