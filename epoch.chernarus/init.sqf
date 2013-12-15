@@ -93,5 +93,12 @@ if (!isDedicated) then {
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
+// UPSMON
+call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
+// SHK 
+call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
+// run SAR_AI
+
+[] execVM "addons\SARGE\SAR_AI_init.sqf";
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"

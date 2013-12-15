@@ -148,3 +148,4 @@ class DayZ_loadingScreen
 		};
 	};
 };
+#include "addons\SARGE\SAR_define.hpp"
