@@ -305,6 +305,7 @@ spawn_vehicles = {
 			
 				//place vehicle 
 				_veh = createVehicle [_vehicle, _position, [], 0, "CAN_COLLIDE"];
+				if(_vehicle in DZE_StripAmmo) then { _veh setVehicleAmmo 0 }; 
 				_veh setdir _dir;
 				_veh setpos _position;		
 				

@@ -86,6 +86,8 @@ _key call server_hiveWrite;
 		_object = createVehicle [_class, _location, [], 0, "CAN_COLLIDE"];
 	};
 
+	if(_class in DZE_StripAmmo) then { _object setVehicleAmmo 0 };
+	
 	if(!_donotusekey) then {
 		// Lock vehicle
 		_object setvehiclelock "locked";

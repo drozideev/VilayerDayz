@@ -102,6 +102,7 @@ if (isServer and isNil "sm_done") then {
 			
 			//Create it
 			_object = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
+			if(_type in DZE_StripAmmo) then { _object setVehicleAmmo 0 };
 			_object setVariable ["lastUpdate",time];
 			_object setVariable ["ObjectID", _idKey, true];
 
