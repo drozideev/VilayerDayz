@@ -75,6 +75,7 @@ if (!isDedicated) then {
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
 	[] execVM "admintools\Activate.sqf";
+	[] execVM "safezone\safezone.sqf";
 	
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
