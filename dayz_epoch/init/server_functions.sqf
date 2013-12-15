@@ -30,7 +30,7 @@ server_spawnEvents =		compile preprocessFileLineNumbers "\z\addons\dayz_server\c
 
 fnc_plyrHit   =				compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fnc_plyrHit.sqf";
 server_deaths = 			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerDeaths.sqf";
-fnc_hTime = compile preprocessFile "\z\addons\dayz_server\Missions\misc\fnc_hTime.sqf"; //Random integer selector for mission wait time
+fnc_hTime = compile preprocessFile "\z\addons\dayz_server\missions\misc\fnc_hTime.sqf"; //Random integer selector for mission wait time
 
 vehicle_handleInteract = {
 	private["_object"];
