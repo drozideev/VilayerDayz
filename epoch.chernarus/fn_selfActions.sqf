@@ -693,12 +693,12 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_sleep = -1;
 	};
 	
-		_clothesTaken = cursorTarget getVariable["clothesTaken",false];
+        _clothesTaken = cursorTarget getVariable["clothesTaken",false];
  
     // Take clothes by Zabn @ BalotaBuddies.net
     if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
         if (s_player_clothes < 0) then {
-            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Снять одежду")+("</t>"), "player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
+            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
         };
     } else {
         player removeAction s_player_clothes;
@@ -872,6 +872,9 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_packtent = -1;
 	player removeAction s_player_fillfuel;
 	s_player_fillfuel = -1;
+    // Take Clothes by Zabn @ Balota Buddies
+        player removeAction s_player_clothes;
+      s_player_clothes = -1;
 	player removeAction s_player_studybody;
 	s_player_studybody = -1;
 	//Dog
