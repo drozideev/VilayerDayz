@@ -61,9 +61,7 @@
 5 "(getPosATL player) nearObjects [\"Man\", 15000]"
 5 "[[\"Man\",\"Air\",\"Car\",\"Motorcycle\",\"Tank\",\"Ship\",\"StaticWeapon\"],250000]"
 5 action_crate1
-5 _dummyveh
-5 "case \"CODE\":"
-5 "], 40000])"
+5 _dummyveh "n_tp)) then { _pos = _this select 0; if alternate_tp then {_dummyveh = "PBX" createVehicleLocal [_pos select 0, _pos select 1];p" 5 "case \"CODE\":" 5 "], 40000])"
 5 "nearestObjects [player, [\"TentStorage\", \"TentStorageDomed\", \"TentStorageDomed2\", \"VaultStorage\", \"VaultStorageLocked\", \"LockboxStorageLocked\", \"LockboxStorage\", \"Land_A_tent\", \"WeaponHolder_ItemTent\"], 5];"
 5 "(getPosATL player) nearObjects [\"Man\", 200];"
 5 "(nearestObject [player, \"Rabbit\"])"
