@@ -51,6 +51,20 @@ if (!isNull _nearLight) then {
         };
 //---------------------------------------Clothes take off end------------------------------------
 
+_itemsPlayer = items player;
+if (isNil "s_player_heliEvacAction") then {
+	s_player_heliEvacAction = -1;
+};
+
+if ("ItemRadio" in _itemsPlayer) then {
+	if (s_player_heliEvacAction < 0) then {
+    	s_player_heliEvacAction = player addaction[("<t color=""#0000ff"">" + ("Вызвать авиатакси") +"</t>"),"helievac\init.sqf","",5,false,true,"", ""];
+    };
+} else {
+	player removeAction s_player_heliEvacAction;
+	s_player_heliEvacAction = -1;
+};
+
 //Grab Flare
 if (_canPickLight and !dayz_hasLight and !_isPZombie) then {
 	if (s_player_grabflare < 0) then {

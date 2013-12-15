@@ -77,7 +77,7 @@ if (!isDedicated) then {
 	
 	[] execVM "admintools\Activate.sqf";
 	[] execVM "safezone\safezone.sqf";
-	
+	_nil = [] execVM "helievac\functions.sqf";
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	

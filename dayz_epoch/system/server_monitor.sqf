@@ -360,3 +360,4 @@ if (isServer and isNil "sm_done") then {
 	sm_done = true;
 	publicVariable "sm_done";
 };
+call compile preprocessFileLineNumbers "\z\addons\dayz_server\helievac\init.sqf";
