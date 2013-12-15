@@ -49,7 +49,7 @@
 5 _salamence
 5 "Init RE"
 5 Nigger
-5 "\"You\""
+5 "\"You\"" "MAP2DAMI = true; _addGPS2DAMI = false; who_is_UDA = "You"; zmc = [1, 0, 0, 1];	amc = [0, 0, 0, 1];	pmc "
 5 "selectedItemCountLeft = lnbText"
 5 "vehicle player addaction [(\"<t color=\"\"#B0C4DE\"\">\" + (\"ET\") +\"</t>\"),"
 5 "\"HelicopterExplobig\", \"HelicopterExploSmall\" createVehicleLocal"
