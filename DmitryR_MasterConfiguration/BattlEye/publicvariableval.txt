@@ -1,5 +1,5 @@
-//1 "" //+2
-1 "draw"
+//1 "" //+2 !="dayzHeliEvac"
+1 "draw"!="dayzHeliEvac"
 1 "hint" !="hintC" !="hintS"
 1 "create"
 1 "add" !="ladder"
