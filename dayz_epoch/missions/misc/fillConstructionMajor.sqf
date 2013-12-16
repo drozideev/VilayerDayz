@@ -5,15 +5,14 @@ clearWeaponCargoGlobal _crate;
 clearMagazineCargoGlobal _crate;
 
 // CONSTRUCTION MATERIALS
-_crate addMagazineCargoGlobal ["bulk_empty", 25];
-_crate addMagazineCargoGlobal ["CinderBlocks", 25];
-_crate addMagazineCargoGlobal ["MortarBucket", 25];
+_crate addMagazineCargoGlobal ["CinderBlocks", 15];
+_crate addMagazineCargoGlobal ["MortarBucket", 15];
 _crate addMagazineCargoGlobal ["PartPlywoodPack", 10];
 _crate addMagazineCargoGlobal ["PartLumberPack", 10];
-_crate addMagazineCargoGlobal ["ItemCanvas", 25];
-_crate addMagazineCargoGlobal ["PartGeneric", 25];
-_crate addMagazineCargoGlobal ["ItemSandbag", 15];
-_crate addMagazineCargoGlobal ["ItemTankTrap", 15];
+_crate addMagazineCargoGlobal ["ItemCanvas", 10];
+_crate addMagazineCargoGlobal ["PartGeneric", 24];
+_crate addMagazineCargoGlobal ["ItemSandbag", 12];
+_crate addMagazineCargoGlobal ["ItemTankTrap", 12];
 _crate addMagazineCargoGlobal ["PartWoodPile", 20];
 
 // TOOLS
