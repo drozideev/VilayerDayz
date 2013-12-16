@@ -33,7 +33,7 @@ sleep 5;
 _aispawn = [_coords,40,4,4,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
 sleep 5;
 
-waitUntil{{isPlayer _x && _x distance _crate < 10  } count playableunits > 0}; 
+waitUntil{{isPlayer _x && _x distance _hummer < 10  } count playableunits > 0}; 
 
 //Mission accomplished
 [nil,nil,rTitleText,"Тайник с оружием отбит у бандитов.", "PLAIN",6] call RE;

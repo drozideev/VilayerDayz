@@ -16,7 +16,7 @@ publicVariable "Ccoords";
 [] execVM "debug\addmarkers.sqf";
 
 _c130wreck = createVehicle ["C130J_wreck_EP1",[(_coords select 0) + 30, (_coords select 1) - 5,0],[], 0, "NONE"];
-_hummer = createVehicle ["SUV_TK_CIV_EP1",[(_coords select 0) - 30, (_coords select 1) - 10,0],[], 0, "CAN_COLLIDE"];
+_hummer = createVehicle ["SUV_TK_CIV_EP1",[(_coords select 0) - 10, (_coords select 1) - 10,0],[], 0, "CAN_COLLIDE"];
 
 _c130wreck setVariable ["Sarge",1,true];
 _hummer setVariable ["Sarge",1,true];

@@ -44,7 +44,7 @@ DynamicVehicleDamageHigh = 100; // Default: 100
 
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
-DZE_StripAmmo = ["BRDM2_HQ_TK_GUE_EP1","Ka52Black","Ka60_PMC","HMMWV_Armored"];
+DZE_StripAmmo = ["BRDM2_HQ_TK_GUE_EP1","Ka52Black","HMMWV_Armored","BTR40_MG_TK_GUE_EP1","HMMWV_M998_crows_M2_DES_EP1","Ural_ZU23_CDF","UH1H_TK_EP1"];
 
 
 //Load in compiled functions
