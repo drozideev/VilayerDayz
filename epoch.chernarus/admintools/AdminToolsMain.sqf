@@ -43,7 +43,7 @@ if ((getPlayerUID player) in ["2292868","75126342","2508420"]) then { //all admi
 			["",true],
 				["Инструменты", [2], "#USER:ToolsMenu", -5, [["expression", ""]], "1", "1"],
 				["Смена скинов", [3], "#USER:SkinsMenu", -5, [["expression", ""]], "1", "1"],
-				["Спавн машин", [5], "#USER:VehicleMenu", -5, [["expression", ""]], "1", "1"],
+				["Спавн машин", [4], "#USER:VehicleMenu", -5, [["expression", ""]], "1", "1"],
 				["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]		
 		];};
@@ -53,14 +53,10 @@ ModToolsMenu =
 [
 	["",true],
 		["ESP", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
-		["Неуязвимость машины", [4],  "", -5, [["expression", format[_EXECscript1,"cargod.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [5],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Ремонт техники", [6],  "", -5, [["expression", format[_EXECscript1,"looknrepair.sqf"]]], "1", "1"],
-		["Ремонт зданий", [7],  "", -5, [["expression", format[_EXECscript1,"fixbuildings.sqf"]]], "1", "1"],
-		["Наблюдение", [8],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
-			["Next page", [12], "#USER:ToolsMenu2", -5, [["expression", ""]], "1", "1"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 //customise to fit
@@ -68,34 +64,19 @@ AdminToolsMenu =
 [
 	["",true],
 		["ESP / Теле", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
-		["Неуязвимость машины", [4],  "", -5, [["expression", format[_EXECscript1,"cargod.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [5],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Ремонт техники", [6],  "", -5, [["expression", format[_EXECscript1,"looknrepair.sqf"]]], "1", "1"],
-		["Ремонт зданий", [7],  "", -5, [["expression", format[_EXECscript1,"fixbuildings.sqf"]]], "1", "1"],
-		["Наблюдение", [8],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
-			["Next page", [12], "#USER:ToolsMenu2", -5, [["expression", ""]], "1", "1"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 ToolsMenu =
 [
 	["",true],
 		["ESP / Теле", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
-		["Неуязвимость машины", [4],  "", -5, [["expression", format[_EXECscript1,"cargod.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [5],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Ремонт техники", [6],  "", -5, [["expression", format[_EXECscript1,"looknrepair.sqf"]]], "1", "1"],
-		["Ремонт зданий", [7],  "", -5, [["expression", format[_EXECscript1,"fixbuildings.sqf"]]], "1", "1"],
-		["Наблюдение", [8],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
-		["", [-1], "", -5, [["expression", ""]], "1", "0"],
-			["Next page", [12], "#USER:ToolsMenu2", -5, [["expression", ""]], "1", "1"],
-			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
-];
-ToolsMenu2 = 
-[
-["",true],
-		["Перевернуть технику", [2],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
@@ -108,8 +89,8 @@ SkinsMenu =
 		["Suvivor", [5],  "", -5, [["expression", format[_EXECscript2,"Male.sqf"]]], "1", "1"],
 		["Soldier", [6],  "", -5, [["expression", format[_EXECscript2,"Soldier.sqf"]]], "1", "1"],
 		["Невидимка", [7],  "", -5, [["expression", format[_EXECscript2,"invisible.sqf"]]], "1", "1"],
-		["Курица", [7],  "", -5, [["expression", format[_EXECscript2,"chiken.sqf"]]], "1", "1"],
-		["Корова", [7],  "", -5, [["expression", format[_EXECscript2,"cow.sqf"]]], "1", "1"],
+		["Курица", [8],  "", -5, [["expression", format[_EXECscript2,"chiken.sqf"]]], "1", "1"],
+		["Корова", [9],  "", -5, [["expression", format[_EXECscript2,"cow.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
