@@ -15,10 +15,6 @@ if (demiGOD == 0) then
 	player removeAllEventHandlers "handleDamage";
 	player addEventHandler ["handleDamage", {false}];
 	player allowDamage false;
-	while {demiGOD == 1} do
-	{
-		vehicle player setVehicleAmmo 1;
-	};
 }
 
 else

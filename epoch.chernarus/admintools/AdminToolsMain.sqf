@@ -53,8 +53,9 @@ ModToolsMenu =
 [
 	["",true],
 		["ESP", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [4],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [5],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
 		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
@@ -64,9 +65,10 @@ AdminToolsMenu =
 [
 	["",true],
 		["ESP / Теле", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
-		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
+		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [4],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [5],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Перевернуть технику", [6],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
@@ -74,9 +76,10 @@ ToolsMenu =
 [
 	["",true],
 		["ESP / Теле", [2],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
-		["Вылечить игрока(ов)", [3],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
-		["Наблюдение", [4],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
-		["Перевернуть технику", [5],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
+		["Неуязвимость", [3],  "", -5, [["expression", format[_EXECscript1,"Godmode.sqf"]]], "1", "1"],
+		["Вылечить игрока(ов)", [4],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
+		["Наблюдение", [5],  "", -5, [["expression", format[_EXECscript1,"spectate.sqf"]]], "1", "1"],
+		["Перевернуть технику", [6],  "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
 		["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
